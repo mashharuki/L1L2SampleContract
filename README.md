@@ -10,7 +10,7 @@ L1 と L2 がどのようにやり取りされているか検証するための�
   yarn
   ```
 
-- デプロイ
+- デプロイ(Lock コントラクト)
 
   Sepolia
 
@@ -23,6 +23,34 @@ L1 と L2 がどのようにやり取りされているか検証するための�
   ```bash
   yarn deploy:optimismSepolia
   ```
+
+- デプロイ(Greeter コントラクト)
+
+  Sepolia
+
+  ```bash
+  yarn deployGreeter:sepolia
+  ```
+
+  OptimismSepolia
+
+  ```bash
+  yarn deployGreeter:optimismSepolia
+  ```
+
+- VerifyContract
+
+  Sepolia 側が verify されていなかった以下のコマンドを実行
+
+  ```bash
+  npx hardhat verifyCotnract --network sepolia
+  ```
+
+- デプロイ後にやること
+
+  それぞれのコントラクトの`send`メソッドを呼び出して L1 から L2 にメッセージが送れられているか(正確には通信先のブロックチェーンのコントラクトのメソッドが呼び出されているか)確認する。
+
+  うまくいけばメッセージが届いているはず
 
 ### 参考文献
 

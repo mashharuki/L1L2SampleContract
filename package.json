@@ -12,7 +12,9 @@
     "lint": "solhint 'contracts/**/*.sol' -- --fix",
     "reset": "npx hardhat resetContractAddressesJson",
     "deploy:sepolia": "npx hardhat run scripts/deploy.ts --network sepolia",
-    "deploy:optimismSepolia": "npx hardhat run scripts/deploy.ts --network optimismSepolia"
+    "deploy:optimismSepolia": "npx hardhat run scripts/deploy.ts --network optimismSepolia",
+    "deployGreeter:sepolia": "npx hardhat run scripts/deploy-greeter.ts --network sepolia",
+    "deployGreeter:optimismSepolia": "npx hardhat run scripts/deploy-greeter.ts --network optimismSepolia"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
