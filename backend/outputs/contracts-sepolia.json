@@ -1,6 +1,7 @@
 {
   "contracts": {
     "Lock": "0x99C91350DC997bd5132E8B2CC9EcAdFD1bd59c4A",
-    "Greeter": "0x40d75c886Ba0CB5d78a356a9b0caade46f5be2b7"
+    "Greeter": "0x40d75c886Ba0CB5d78a356a9b0caade46f5be2b7",
+    "Wallet": "0xA433938c78A781E1f6c79f7F8BE2C200cb6bC046"
   }
 }

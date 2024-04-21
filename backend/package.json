@@ -14,7 +14,9 @@
     "deploy:sepolia": "npx hardhat run scripts/deploy.ts --network sepolia",
     "deploy:optimismSepolia": "npx hardhat run scripts/deploy.ts --network optimismSepolia",
     "deployGreeter:sepolia": "npx hardhat run scripts/deploy-greeter.ts --network sepolia",
-    "deployGreeter:optimismSepolia": "npx hardhat run scripts/deploy-greeter.ts --network optimismSepolia"
+    "deployGreeter:optimismSepolia": "npx hardhat run scripts/deploy-greeter.ts --network optimismSepolia",
+    "deployWallet:sepolia": "npx hardhat run scripts/deploy-wallet.ts --network sepolia",
+    "deployWallet:optimismSepolia": "npx hardhat run scripts/deploy-wallet.ts --network optimismSepolia"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

@@ -62,12 +62,30 @@ L1 と L2 がどのようにやり取りされているか検証するための�
   yarn deployGreeter:optimismSepolia
   ```
 
+- デプロイ(Wallet コントラクト)
+
+  Sepolia
+
+  ```bash
+  yarn deployWallet:sepolia
+  ```
+
+  OptimismSepolia
+
+  ```bash
+  yarn deployWallet:optimismSepolia
+  ```
+
 - VerifyContract
 
   Sepolia 側が verify されていなかった以下のコマンドを実行
 
   ```bash
-  npx hardhat verifyCotnract --network sepolia
+  npx hardhat verifyContract --name Greeter --network sepolia
+  ```
+
+  ```bash
+  npx hardhat verifyContract --name Wallet --network sepolia
   ```
 
 - デプロイ後にやること
@@ -82,12 +100,24 @@ L1 と L2 がどのようにやり取りされているか検証するための�
   npx hardhat sendMessage --message test --network sepolia
   ```
 
+  ```bash
+  npx hardhat sendMessage --message test --network optimismSepolia
+  ```
+
 - L2からL1にメッセージを送る場合
 
   OptisismからSepoliaに対してメッセージを送る際にはコントラクトのメソッドを呼び出した後に別のスクリプトを実行してトランザクションをfinalizedさせる必要あり
 
   ```bash
   yarn finalize
+  ```
+
+- L1 から L2にETHを送る方法
+
+  amount に指定した分だけ targetにしたアドレスに送金される。
+
+  ```bash
+  npx hardhat sendEth --target 0xD3095061512BCEA8E823063706BB9B15F75b187b --amount 0.001 --network sepolia
   ```
 
 ### 参考文献

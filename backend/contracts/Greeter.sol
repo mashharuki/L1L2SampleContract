@@ -1,11 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.24;
 
-interface ICrossDomainMessenger {
-  function xDomainMessageSender() external view returns (address);
-  function sendMessage(address target, bytes calldata message, uint32 gasLimit) external;
-}
-
+import "./interface/ICrossDomainMessenger.sol";
 
 contract Greeter {
   // ETH Sepolia messenger - L1 0x58Cc85b8D04EA49cC6DBd3CbFFd00B4B8D6cb3ef
