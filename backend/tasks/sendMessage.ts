@@ -1,9 +1,6 @@
 import {task} from "hardhat/config";
 import {HardhatRuntimeEnvironment} from "hardhat/types";
-import {
-  loadDeployedContractAddresses,
-  resetContractAddressesJson,
-} from "../helper/contractsJsonHelper";
+import {loadDeployedContractAddresses} from "../helper/contractsJsonHelper";
 
 task("sendMessage", "sendMessege from L1 to L2 or from L2 to L1")
   .addParam("message", "message data")
