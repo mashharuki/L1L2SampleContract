@@ -52,6 +52,12 @@ L1 と L2 がどのようにやり取りされているか検証するための�
 
   うまくいけばメッセージが届いているはず
 
+- task で message を送る方法
+
+  ```bash
+  npx hardhat sendMessage --message test --network sepolia
+  ```
+
 ### 参考文献
 
 1. [SampleCode](https://github.com/t4sk/notes/blob/main/op/contracts/Greeter.sol)

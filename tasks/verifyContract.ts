@@ -7,6 +7,9 @@ import {
 
 task("verifyContract", "verifyContract").setAction(
   async (taskArgs: any, hre: HardhatRuntimeEnvironment) => {
+    console.log(
+      "===================================== [START] ====================================="
+    );
     // get Contract Address
     const {
       contracts: {Greeter},
@@ -17,5 +20,9 @@ task("verifyContract", "verifyContract").setAction(
       address: Greeter,
       constructorArguments: ["0x58Cc85b8D04EA49cC6DBd3CbFFd00B4B8D6cb3ef"],
     });
+
+    console.log(
+      "===================================== [END] ====================================="
+    );
   }
 );
