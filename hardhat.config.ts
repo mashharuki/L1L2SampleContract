@@ -71,7 +71,6 @@ const config: HardhatUserConfig = {
   gasReporter: {
     enabled: GAS_REPORT ? true : false,
     currency: "JPY",
-    gasPrice: 20,
     token: "ETH",
     coinmarketcap: COINMARKETCAP_API_KEY,
     gasPriceApi:
